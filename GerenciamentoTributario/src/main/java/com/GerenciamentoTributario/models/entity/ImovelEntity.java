@@ -1,11 +1,13 @@
 package com.GerenciamentoTributario.models.entity;
 
 import com.GerenciamentoTributario.Enum.MenuTipoImovel;
+import lombok.Data;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
 
 @Entity
+@Data
 @Table(name = "imovel")
 public class ImovelEntity{
     @Id
@@ -25,45 +27,4 @@ public class ImovelEntity{
 
 
 
-
-    //Getters e Setters
-    public String getCodigoImovel() {
-        return codigoImovel;
-    }
-
-    public void setCodigoImovel(String codigoImovel) {
-        this.codigoImovel = codigoImovel;
-    }
-
-    public LocalDateTime getDataInscricao() {
-        return dataInscricao;
-    }
-
-    public void setDataInscricao(LocalDateTime dataInscricao) {
-        this.dataInscricao = dataInscricao;
-    }
-
-    public double getArea() {
-        return area;
-    }
-
-    public void setArea(double area) {
-        this.area = area;
-    }
-
-    public double getValorVenal() {
-        return valorVenal;
-    }
-
-    public void setValorVenal(double valorVenal) {
-        this.valorVenal = valorVenal;
-    }
-
-    public Enum<MenuTipoImovel> getTipoImovel() {
-        return tipoImovel;
-    }
-
-    public void setTipoImovel(Enum<MenuTipoImovel> tipoImovel) {
-        this.tipoImovel = tipoImovel;
-    }
 }
