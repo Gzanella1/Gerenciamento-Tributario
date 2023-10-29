@@ -1,14 +1,13 @@
 package com.GerenciamentoTributario.models.entity;
 
-import com.GerenciamentoTributario.Enum.MenuTipoImovel;
 import lombok.Data;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
 
-@Entity
 @Data
 @Table(name = "imovel")
+@Entity
 public class ImovelEntity{
     @Id
     @Column(name = "codigoImovel")
@@ -20,11 +19,9 @@ public class ImovelEntity{
     private double area;
     @Column(name = "valorVenal")
     private double valorVenal;
-
-    //VER COM A JESSICA SOBRE O ENUM
-    @Column(name = "tipoImovel")
-    private Enum<MenuTipoImovel> tipoImovel;
-
-
-
+//    @Column(name = "tipoImovel")
+//    private MenuTipoImovel tipoImovel;
+    @ManyToOne
+    @JoinColumn(name = "contribuinte_id")
+    private ContribuinteEntity proprietario;
 }

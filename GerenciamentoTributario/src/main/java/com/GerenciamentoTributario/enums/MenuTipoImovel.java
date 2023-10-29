@@ -1,4 +1,4 @@
-package com.GerenciamentoTributario.Enum;
+package com.GerenciamentoTributario.enums;
 
 public enum MenuTipoImovel {
     LOTE("lote"),

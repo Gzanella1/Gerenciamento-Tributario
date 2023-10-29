@@ -7,6 +7,6 @@ public class ContribuinteDTO{
         private String codigoContribuinte;
         private String cpf;
         private String nome;
-        private int telefone;
+        private String telefone;
         private String email;
 }
