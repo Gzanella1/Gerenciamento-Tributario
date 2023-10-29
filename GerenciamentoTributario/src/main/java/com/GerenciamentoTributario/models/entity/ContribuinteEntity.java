@@ -17,6 +17,7 @@ import javax.persistence.*;
 public class ContribuinteEntity {
 
     @Id
+    @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
     @Column(name = "codigoContribuinte")

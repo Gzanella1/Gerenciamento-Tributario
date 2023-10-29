@@ -13,6 +13,6 @@ public class ImovelDTO {
     private double area;
     private double valorVenal;
     //VER COM A JESSICA SOBRE O ENUM
-//private MenuTipoImovel tipoImovel;
+    //private MenuTipoImovel tipoImovel;
 
 }

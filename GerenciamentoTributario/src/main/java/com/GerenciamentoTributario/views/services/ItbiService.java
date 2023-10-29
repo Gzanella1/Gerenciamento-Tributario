@@ -1,28 +1,34 @@
 package com.GerenciamentoTributario.views.services;
 
 import com.GerenciamentoTributario.models.dto.ItbiDTO;
-import com.GerenciamentoTributario.models.entity.ContribuinteEntity;
 import com.GerenciamentoTributario.models.entity.ItbiEntity;
-import com.GerenciamentoTributario.models.entity.TributoEntity;
-import com.GerenciamentoTributario.views.repository.TributoRepository;
+import com.GerenciamentoTributario.views.repository.ItbiRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-
-public class ItbiService extends TributoService{
-
+public class ItbiService {
     @Autowired
-    private TributoRepository tributoRepository;
-    public void addTributoItbi(ItbiDTO iptuDTO) {
-        ItbiEntity tributo_Itbi=new ItbiEntity();
-        tributo_Itbi.setDataTransferencia(iptuDTO.getDataTransferencia());
-        tributo_Itbi.setProprietarioAtual(tributo_Itbi.getProprietarioAtual());
-        tributo_Itbi.setNovoProprietario(iptuDTO.getNovoProprietario());
-        tributo_Itbi.setValor(tributo_Itbi.getValor());
-        tributo_Itbi.setDataLancamento(tributo_Itbi.getDataLancamento());
-        tributoRepository.save(tributo_Itbi);
+    private ItbiRepository itbiRepository;
 
-
+    public void cadastrarItbi(ItbiDTO itbiDTO){
+        ItbiEntity tributoItbi=new ItbiEntity();
+        tributoItbi.setDataTransferencia(itbiDTO.getDataTransferencia());
+        tributoItbi.setValor(itbiDTO.getValor());
+        tributoItbi.setDataLancamento(itbiDTO.getDataLancamento());
+        tributoItbi.setProprietarioAtual(itbiDTO.getProprietarioAtual());
+        tributoItbi.setNovoProprietario(itbiDTO.getNovoProprietario());
+        //ta faltando o imovel
+        itbiRepository.save(tributoItbi);
     }
+
+//    public void add(ItbiDTO itbiDTO){
+//        ItbiEntity tributoItbi= ItbiEntity.builder()
+//                .proprietarioAtual(itbiDTO.getProprietarioAtual())
+//                .dataTransferencia(itbiDTO.getDataTransferencia())
+//                .novoProprietario(itbiDTO.getNovoProprietario())
+//                .
+//                .build();
+//    }
+
 }

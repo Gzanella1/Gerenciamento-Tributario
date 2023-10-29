@@ -22,6 +22,6 @@ public class ImovelEntity{
 //    @Column(name = "tipoImovel")
 //    private MenuTipoImovel tipoImovel;
     @ManyToOne
-    @JoinColumn(name = "contribuinte_id")
+    @JoinColumn(name = "id")
     private ContribuinteEntity proprietario;
 }
