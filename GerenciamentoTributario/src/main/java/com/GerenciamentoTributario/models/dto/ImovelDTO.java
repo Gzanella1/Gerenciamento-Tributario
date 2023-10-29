@@ -1,5 +1,6 @@
 package com.GerenciamentoTributario.models.dto;
 
+import com.GerenciamentoTributario.enums.MenuTipoImovel;
 import lombok.Data;
 
 
@@ -12,7 +13,6 @@ public class ImovelDTO {
     private LocalDateTime dataInscricao;
     private double area;
     private double valorVenal;
-    //VER COM A JESSICA SOBRE O ENUM
-    //private MenuTipoImovel tipoImovel;
+    private MenuTipoImovel tipoImovel;
 
 }

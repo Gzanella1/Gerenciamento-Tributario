@@ -1,27 +1,30 @@
 package com.GerenciamentoTributario.models.entity;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
 
 @Data
-@Table(name = "imovel")
 @Entity
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
+@Table(name = "imovel")
 public class ImovelEntity{
     @Id
-    @Column(name = "codigoImovel")
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private String codigoImovel ;
-    @Column(name = "dataInscricao")
-    private LocalDateTime dataInscricao;
-    @Column(name = "area")
-    private double area;
-    @Column(name = "valorVenal")
-    private double valorVenal;
-//    @Column(name = "tipoImovel")
-//    private MenuTipoImovel tipoImovel;
-    @ManyToOne
-    @JoinColumn(name = "id")
+    private int id;
+
+    @Column(name = "codigoImovel")
+    private String codigoImovel;
+
+    @OneToOne
+    @Column(name = "proprietario")
+    @JoinColumn(name = "codigoContribuinte")
     private ContribuinteEntity proprietario;
+
 }

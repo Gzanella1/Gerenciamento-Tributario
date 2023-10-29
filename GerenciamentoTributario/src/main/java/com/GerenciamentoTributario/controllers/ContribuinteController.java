@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping(value = "/contribuinte")
 public class ContribuinteController {
 
+    @Autowired
     private final ContribuinteService contribuinteService;
 
     public ContribuinteController(ContribuinteService contribuinteService) {

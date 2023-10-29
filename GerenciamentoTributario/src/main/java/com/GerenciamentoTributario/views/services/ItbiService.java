@@ -22,13 +22,4 @@ public class ItbiService {
         itbiRepository.save(tributoItbi);
     }
 
-//    public void add(ItbiDTO itbiDTO){
-//        ItbiEntity tributoItbi= ItbiEntity.builder()
-//                .proprietarioAtual(itbiDTO.getProprietarioAtual())
-//                .dataTransferencia(itbiDTO.getDataTransferencia())
-//                .novoProprietario(itbiDTO.getNovoProprietario())
-//                .
-//                .build();
-//    }
-
 }
