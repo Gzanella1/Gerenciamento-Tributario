@@ -5,16 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="58b37d86-a07a-40c0-93ee-e164c0450a28" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/GerenciamentoTributario/src/main/java/com/GerenciamentoTributario/controllers/ImovelRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GerenciamentoTributario/src/main/java/com/GerenciamentoTributario/controllers/ContribuinteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciamentoTributario/src/main/java/com/GerenciamentoTributario/controllers/ContribuinteController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GerenciamentoTributario/src/main/java/com/GerenciamentoTributario/controllers/HomeController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GerenciamentoTributario/src/main/java/com/GerenciamentoTributario/controllers/ImovelController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GerenciamentoTributario/src/main/java/com/GerenciamentoTributario/controllers/TributosController.java" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciamentoTributario/src/main/java/com/GerenciamentoTributario/controllers/TributosController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GerenciamentoTributario/src/main/java/com/GerenciamentoTributario/models/dto/ImovelDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciamentoTributario/src/main/java/com/GerenciamentoTributario/models/dto/ImovelDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GerenciamentoTributario/src/main/java/com/GerenciamentoTributario/models/entity/ImovelEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciamentoTributario/src/main/java/com/GerenciamentoTributario/models/entity/ImovelEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GerenciamentoTributario/src/main/java/com/GerenciamentoTributario/views/repository/ImovelRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciamentoTributario/src/main/java/com/GerenciamentoTributario/views/repository/ImovelRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GerenciamentoTributario/src/main/java/com/GerenciamentoTributario/views/services/ImovelService.java" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciamentoTributario/src/main/java/com/GerenciamentoTributario/views/services/ImovelService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GerenciamentoTributario/src/main/java/com/GerenciamentoTributario/views/services/ItbiService.java" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciamentoTributario/src/main/java/com/GerenciamentoTributario/views/services/ItbiService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GerenciamentoTributario/src/main/java/com/GerenciamentoTributario/controllers/ImovelController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GerenciamentoTributario/src/main/java/com/GerenciamentoTributario/controllers/ImovelRepository.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +45,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "tributos",
+    "git-widget-placeholder": "main",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -86,22 +78,11 @@
       <option name="presentableId" value="Default" />
       <updated>1698531012966</updated>
       <workItem from="1698531014267" duration="15881000" />
-      <workItem from="1698582973913" duration="26182000" />
+      <workItem from="1698582973913" duration="26769000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/GerenciamentoTributario/src/main/java/com/GerenciamentoTributario/controllers/ContribuinteController.java</url>
-          <line>27</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
