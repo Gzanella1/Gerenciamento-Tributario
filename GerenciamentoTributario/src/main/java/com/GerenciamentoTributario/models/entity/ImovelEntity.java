@@ -1,5 +1,6 @@
 package com.GerenciamentoTributario.models.entity;
 
+import com.GerenciamentoTributario.enums.MenuTipoImovel;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -17,14 +18,22 @@ import java.time.LocalDateTime;
 public class ImovelEntity{
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int id;
+    private String id;
 
     @Column(name = "codigoImovel")
     private String codigoImovel;
+    @Column(name = "dataInscricao")
+    private LocalDateTime dataInscricao;
 
-    @OneToOne
-    @Column(name = "proprietario")
+    @ManyToOne
     @JoinColumn(name = "codigoContribuinte")
     private ContribuinteEntity proprietario;
+
+    @Column(name="area")
+    private double area;
+    @Column(name="valorVenal")
+    private double valorVenal;
+    @Column(name="tipoImovel")
+    private MenuTipoImovel tipoImovel;
 
 }

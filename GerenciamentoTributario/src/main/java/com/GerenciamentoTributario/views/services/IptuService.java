@@ -15,12 +15,13 @@ public class IptuService {
 
     @Autowired
     private IptuRepository iptuRepository;
+
     public void cadastrarIptu(IptuDTO iptuDTO) {
-        IptuEntity tributoIptu=new IptuEntity();
-        tributoIptu.setAnoCompetencia(iptuDTO.getAnoCompetencia());
-        tributoIptu.setDataLancamento(iptuDTO.getDataLancamento());
-        tributoIptu.setValor(iptuDTO.getValor());
-        //ta faltando o Imovel
+        IptuEntity tributoIptu = IptuEntity.builder()
+                .anoCompetencia(iptuDTO.getAnoCompetencia())
+                .valor(iptuDTO.getValor())
+                .dataLancamento(iptuDTO.getDataLancamento())
+                .build();
         iptuRepository.save(tributoIptu);
     }
 

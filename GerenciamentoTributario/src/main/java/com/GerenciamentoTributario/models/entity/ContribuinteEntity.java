@@ -20,8 +20,12 @@ public class ContribuinteEntity {
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
+
+
+    @JoinColumn(name = "proprietario")
     @Column(name = "codigoContribuinte")
     private String codigoContribuinte;
+
     @Column(name = "cpf")
     private String cpf;
     @Column(name = "nome")
@@ -30,4 +34,6 @@ public class ContribuinteEntity {
     private String telefone;
     @Column(name = "email")
     private String email;
+
+
 }

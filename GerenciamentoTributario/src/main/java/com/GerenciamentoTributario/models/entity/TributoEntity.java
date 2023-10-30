@@ -1,23 +1,25 @@
 package com.GerenciamentoTributario.models.entity;
 
 import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.experimental.SuperBuilder;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import java.time.LocalDateTime;
 
-@Entity
 @Data
+@SuperBuilder
+@NoArgsConstructor
+@AllArgsConstructor
 public class TributoEntity{
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    protected int id;
+
     @Column(name = "dataLancamento")
     protected LocalDateTime dataLancamento;
     @Column(name = "valor")
     public String valor;
-
-   // protected ImovelEntity imovel;
+    // protected ImovelEntity imovel;
 }
