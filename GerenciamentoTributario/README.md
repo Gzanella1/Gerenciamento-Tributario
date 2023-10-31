@@ -6,7 +6,7 @@ O projeto **Gerenciamento Tributário** é uma aplicação que oferece soluçõe
 
 ## Tecnologias Utilizadas
 
-- Java
+- Java 17
 - Spring Boot
 - Banco de Dados H2
 - Arquitetura MVC
