@@ -8,7 +8,9 @@ import java.time.LocalDateTime;
 
 @Data
 public class TributoDTO {
-    protected LocalDateTime dataLancamento;
-    protected String valor;
-    protected ImovelEntity imovel;
+
+    private LocalDateTime dataLancamento;
+    private String valor;
+    private ImovelDTO imovel;
+
 }

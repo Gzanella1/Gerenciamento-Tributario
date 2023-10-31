@@ -15,25 +15,25 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @NoArgsConstructor
 @Table(name = "imovel")
-public class ImovelEntity{
+public class ImovelEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private String id;
+    private int id;
 
     @Column(name = "codigoImovel")
     private String codigoImovel;
     @Column(name = "dataInscricao")
     private LocalDateTime dataInscricao;
 
-    @ManyToOne
-    @JoinColumn(name = "codigoContribuinte")
+    @ManyToOne(cascade = CascadeType.MERGE)
+    @JoinColumn(name = "contribuinte_id")
     private ContribuinteEntity proprietario;
 
-    @Column(name="area")
+    @Column(name = "area")
     private double area;
-    @Column(name="valorVenal")
+    @Column(name = "valorVenal")
     private double valorVenal;
-    @Column(name="tipoImovel")
+    @Column(name = "tipoImovel")
     private MenuTipoImovel tipoImovel;
 
 }

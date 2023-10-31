@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 //Ajuda a construir um objeto se usar get e set
@@ -13,7 +14,7 @@ import javax.persistence.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-@Table(name="contribuinte")
+@Table(name = "contribuinte")
 public class ContribuinteEntity {
 
     @Id
@@ -21,8 +22,6 @@ public class ContribuinteEntity {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
 
-
-    @JoinColumn(name = "proprietario")
     @Column(name = "codigoContribuinte")
     private String codigoContribuinte;
 

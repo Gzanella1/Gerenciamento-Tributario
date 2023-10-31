@@ -19,18 +19,20 @@ public class ItbiEntity extends TributoEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     protected int id;
-    @Column(name = "proprietarioAtual")
-    private String proprietarioAtual;
-    @Column(name = "novoProprietario")
-    private String novoProprietario;
+
     @Column(name = "dataTransferencia")
     private LocalDateTime dataTransferencia;
 
+    @ManyToOne(cascade = CascadeType.MERGE)
+    @JoinColumn(name = "proprietarioAtual_id")
+    private ContribuinteEntity proprietarioAtual;
 
-    public ItbiEntity(LocalDateTime dataLancamento, String valor, String proprietarioAtual, String novoProprietario, LocalDateTime dataTransferencia) {
-        super(dataLancamento, valor);
-        this.proprietarioAtual = proprietarioAtual;
-        this.novoProprietario = novoProprietario;
-        this.dataTransferencia = dataTransferencia;
-    }
+    @ManyToOne(cascade = CascadeType.MERGE)
+    @JoinColumn(name = "novoProprietario_id")
+    private ContribuinteEntity novoProprietario;
+
+    @ManyToOne(cascade = CascadeType.MERGE)
+    @JoinColumn(name = "imovel_id")
+    private ImovelEntity imovel;
+
 }

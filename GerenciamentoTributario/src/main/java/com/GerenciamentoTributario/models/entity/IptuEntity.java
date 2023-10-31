@@ -11,7 +11,7 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @Entity
 @Table(name = "iptu")
-public class IptuEntity extends TributoEntity{
+public class IptuEntity extends TributoEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -19,8 +19,14 @@ public class IptuEntity extends TributoEntity{
     @Column(name = "anoCompetencia")
     private String anoCompetencia;
 
-    public IptuEntity(int id, LocalDateTime dataLancamento, String valor, String anoCompetencia) {
+    @ManyToOne(cascade = CascadeType.MERGE)
+    @JoinColumn(name = "imovel_id")
+    private ImovelEntity imovel;
+
+    public IptuEntity(LocalDateTime dataLancamento, String valor, int id, String anoCompetencia, ImovelEntity imovel) {
         super(dataLancamento, valor);
+        this.id = id;
         this.anoCompetencia = anoCompetencia;
+        this.imovel = imovel;
     }
 }

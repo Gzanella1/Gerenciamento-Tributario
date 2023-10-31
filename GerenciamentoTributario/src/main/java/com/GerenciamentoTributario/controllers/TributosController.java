@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 // A anotação @RestController indica que esta classe é um controlador Spring que lida com solicitações HTTP.
 @RestController
+@RequestMapping("/tributos")
 public class TributosController {
 
     @Autowired
@@ -20,7 +21,7 @@ public class TributosController {
     private ItbiService itbiService;
 
     @PostMapping("/iptu")
-    public void cadastrarIptu(@RequestBody IptuDTO iptuDTO ) {
+    public void cadastrarIptu(@RequestBody IptuDTO iptuDTO) {
         // Chama o método cadastrarIptu no serviço IptuService com os dados recebidos no corpo da solicitação.
         iptuService.cadastrarIptu(iptuDTO);
     }

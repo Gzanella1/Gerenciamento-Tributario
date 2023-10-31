@@ -7,6 +7,7 @@ public enum MenuTipoImovel {
     COMERCIO("comércio");
 
     private String descricao;
+
     MenuTipoImovel(String descricao) {
         this.descricao = descricao;
     }
