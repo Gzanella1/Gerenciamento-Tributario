@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Gerenciamento-Tributario.iml" filepath="$PROJECT_DIR$/.idea/Gerenciamento-Tributario.iml" />
+      <module fileurl="file://$PROJECT_DIR$/GerenciamentoTributario/GerenciamentoTributario.iml" filepath="$PROJECT_DIR$/GerenciamentoTributario/GerenciamentoTributario.iml" />
     </modules>
   </component>
 </project>

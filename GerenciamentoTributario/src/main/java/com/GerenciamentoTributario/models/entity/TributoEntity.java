@@ -12,6 +12,7 @@ import java.time.LocalDateTime;
 @SuperBuilder
 @NoArgsConstructor
 @AllArgsConstructor
+@MappedSuperclass
 public class TributoEntity {
 
     @Column(name = "dataLancamento")

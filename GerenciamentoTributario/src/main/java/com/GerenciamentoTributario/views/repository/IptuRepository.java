@@ -8,6 +8,6 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface IptuRepository extends JpaRepository<IptuEntity, String> {
+public interface IptuRepository extends JpaRepository<IptuEntity, Integer> {
     List<IptuEntity>findAll();
 }

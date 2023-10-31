@@ -101,13 +101,22 @@ A aplicação disponibiliza os seguintes endpoints para interagir com os recurso
      }
      ```
 
-5. Retorno de Todos os Imóveis
+5. Retorno de Todos os Imóveis ordenado pelo codigo
    - URL: `http://localhost:8080/imovel/todos`
    - Método: GET
 
-6. Retorno dos Imóveis de um Determinado Contribuinte
+6. Retorno dos Imóveis de um Determinado Contribuinte, passando o seu codigo como parametro
    - URL: `http://localhost:8080/imovel/busca?codigoContribuinte=456789`
    - Método: GET
+
+7. Retorno dos tributos do tipo IPTU
+    - URL: `http://localhost:8080/tributos/iptu`
+    - Método: GET
+
+7. Retorno dos tributos do tipo ITBI
+    - URL: `http://localhost:8080/tributos/itbi`
+    - Método: GET
+
 
 Certifique-se de utilizar o Postman ou qualquer outra ferramenta de teste de API para interagir com os endpoints e acessar as funcionalidades da aplicação.
 
@@ -119,7 +128,7 @@ Certifique-se de utilizar o Postman ou qualquer outra ferramenta de teste de API
 
 Para visualizar os dados armazenados no banco de dados H2, siga estas etapas:
 
-1. Após iniciar o aplicativo, acesse o H2 Console no seu navegador:
+1. Após iniciar o aplicativo, acesse o H2 Console no seu navegador:http://localhost:8080/h2/
 2. Certifique-se de usar as configurações corretas no H2 Console:
 - Driver Class: `org.h2.Driver`
 - JDBC URL: `jdbc:h2:mem:publica`

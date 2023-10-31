@@ -12,5 +12,6 @@ public interface ImovelRepository extends JpaRepository<ImovelEntity, String> {
 
     ImovelEntity findByCodigoImovel(String id);
     List<ImovelEntity> findByOrderByCodigoImovelAsc();
+    List<ImovelEntity> findAllByOrderByCodigoImovelAsc();
     List<ImovelEntity> findByProprietario(ContribuinteEntity contribuinte);
 }

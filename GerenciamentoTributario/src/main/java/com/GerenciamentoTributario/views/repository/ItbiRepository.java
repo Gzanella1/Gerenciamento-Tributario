@@ -7,5 +7,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface ItbiRepository extends JpaRepository<ItbiEntity, String> {
+public interface ItbiRepository extends JpaRepository<ItbiEntity, Integer> {
 }

@@ -41,34 +41,15 @@ public class ImovelService {
         imovelRepository.save(imovel);
     }
 
-
-    public List<ImovelEntity> buscarImoveisOrdenadosPorCodigo() {
-        List<ImovelEntity> imovelEntities = imovelRepository.findAll();
-        Collections.sort(imovelEntities,(i1,i2)->i2.getCodigoImovel().compareTo(i1.getCodigoImovel()));
-//        return imovelRepository.findByOrderByCodigoImovelAsc().stream().map(imovelE -> {
-//            ImovelDTO imovelDTO = new ImovelDTO();
-//            imovelDTO.setCodigoImovel(imovelE.getCodigoImovel());
-//            imovelDTO.setDataInscricao(imovelE.getDataInscricao());
-//            imovelDTO.setArea(imovelE.getArea());
-//            imovelDTO.setValorVenal(imovelE.getValorVenal());
-//            imovelDTO.setTipoImovel(imovelE.getTipoImovel());
-//            return imovelDTO;
-//        }).collect(Collectors.toList());
-        return imovelEntities;
-    }
-
     public List<ImovelDTO> buscarImoveisPorContribuinte(String codigoContribuinte) {
         ContribuinteEntity contribuinte =new ContribuinteEntity();
         try{
             log.info("Executando find para encontrar contribuinte no banco de dados");
             //Busca um objeto contribuinte caso o codigo corresponde ao codigoContribuinte que é passado por parametro
             contribuinte = contribuinteRepository.findByCodigoContribuinte(codigoContribuinte);
-
-
         }catch(Exception e){
             log.error("Contribuinte não encontrado na base de dados");
         }
-
         if (contribuinte != null) {
             try{
                 //busca um imovel caso o proprietario corresponde ao contribuinte
@@ -107,6 +88,37 @@ public class ImovelService {
         }
         return Collections.emptyList();
     }
+
+
+    public List<ImovelDTO> buscarImoveisOrdenadosPorCodigo() {
+        List<ImovelEntity> imovelEntities = imovelRepository.findByOrderByCodigoImovelAsc();
+        return imovelEntities.stream().map(imovelE -> {
+            ImovelDTO imovelDTO = new ImovelDTO();
+            imovelDTO.setCodigoImovel(imovelE.getCodigoImovel());
+            imovelDTO.setDataInscricao(imovelE.getDataInscricao());
+            imovelDTO.setArea(imovelE.getArea());
+            imovelDTO.setValorVenal(imovelE.getValorVenal());
+            imovelDTO.setTipoImovel(imovelE.getTipoImovel());
+            return imovelDTO;
+        }).collect(Collectors.toList());
+    }
+
+
+    public List<ImovelDTO> buscarImoveisOrdenadosPorCodigo1() {
+        List<ImovelEntity> imovelEntities = imovelRepository.findAllByOrderByCodigoImovelAsc();
+        return imovelEntities.stream().map(imovelE -> {
+            ImovelDTO imovelDTO = new ImovelDTO();
+            imovelDTO.setCodigoImovel(imovelE.getCodigoImovel());
+            imovelDTO.setDataInscricao(imovelE.getDataInscricao());
+            imovelDTO.setArea(imovelE.getArea());
+            imovelDTO.setValorVenal(imovelE.getValorVenal());
+            imovelDTO.setTipoImovel(imovelE.getTipoImovel());
+            return imovelDTO;
+        }).collect(Collectors.toList());
+    }
+
+
+
 }
 
 

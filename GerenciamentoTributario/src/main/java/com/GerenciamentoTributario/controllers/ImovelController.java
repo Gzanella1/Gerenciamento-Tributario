@@ -21,7 +21,7 @@ public class ImovelController {
     }
 
     @GetMapping("/todos")
-    public List<ImovelEntity> buscarImoveisOrdenadosPorCodigo() {
+    public List<ImovelDTO> buscarImoveisOrdenadosPorCodigo() {
         return imovelService.buscarImoveisOrdenadosPorCodigo();
     }
 

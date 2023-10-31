@@ -1,10 +1,14 @@
 package com.GerenciamentoTributario.models.dto;
 
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
 @Builder
+@NoArgsConstructor
+@AllArgsConstructor
 //@Data gera os getter es setters dos atributos
 public class ContribuinteDTO {
     private String codigoContribuinte;
@@ -13,12 +17,5 @@ public class ContribuinteDTO {
     private String telefone;
     private String email;
 
-    public ContribuinteDTO(String codigoContribuinte, String cpf, String nome, String telefone, String email) {
-        this.codigoContribuinte = codigoContribuinte;
-        this.cpf = cpf;
-        this.nome = nome;
-        this.telefone = telefone;
-        this.email = email;
-    }
 
 }

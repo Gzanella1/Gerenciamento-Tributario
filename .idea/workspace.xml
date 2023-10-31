@@ -5,23 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="58b37d86-a07a-40c0-93ee-e164c0450a28" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/GerenciamentoTributario/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GerenciamentoTributario/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciamentoTributario/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GerenciamentoTributario/src/main/java/com/GerenciamentoTributario/GerenciamentoTributarioApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciamentoTributario/src/main/java/com/GerenciamentoTributario/GerenciamentoTributarioApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GerenciamentoTributario/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciamentoTributario/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GerenciamentoTributario/src/main/java/com/GerenciamentoTributario/controllers/ImovelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciamentoTributario/src/main/java/com/GerenciamentoTributario/controllers/ImovelController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GerenciamentoTributario/src/main/java/com/GerenciamentoTributario/controllers/TributosController.java" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciamentoTributario/src/main/java/com/GerenciamentoTributario/controllers/TributosController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GerenciamentoTributario/src/main/java/com/GerenciamentoTributario/models/dto/ContribuinteDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciamentoTributario/src/main/java/com/GerenciamentoTributario/models/dto/ContribuinteDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GerenciamentoTributario/src/main/java/com/GerenciamentoTributario/models/dto/ImovelDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciamentoTributario/src/main/java/com/GerenciamentoTributario/models/dto/ImovelDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GerenciamentoTributario/src/main/java/com/GerenciamentoTributario/models/dto/IptuDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciamentoTributario/src/main/java/com/GerenciamentoTributario/models/dto/IptuDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GerenciamentoTributario/src/main/java/com/GerenciamentoTributario/models/dto/ItbiDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciamentoTributario/src/main/java/com/GerenciamentoTributario/models/dto/ItbiDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GerenciamentoTributario/src/main/java/com/GerenciamentoTributario/models/dto/TributoDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciamentoTributario/src/main/java/com/GerenciamentoTributario/models/dto/TributoDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GerenciamentoTributario/src/main/java/com/GerenciamentoTributario/models/entity/ImovelEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciamentoTributario/src/main/java/com/GerenciamentoTributario/models/entity/ImovelEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GerenciamentoTributario/src/main/java/com/GerenciamentoTributario/models/entity/TributoEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciamentoTributario/src/main/java/com/GerenciamentoTributario/models/entity/TributoEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GerenciamentoTributario/src/main/java/com/GerenciamentoTributario/views/repository/ImovelRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciamentoTributario/src/main/java/com/GerenciamentoTributario/views/repository/ImovelRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GerenciamentoTributario/src/main/java/com/GerenciamentoTributario/views/repository/IptuRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciamentoTributario/src/main/java/com/GerenciamentoTributario/views/repository/IptuRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GerenciamentoTributario/src/main/java/com/GerenciamentoTributario/views/repository/ItbiRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciamentoTributario/src/main/java/com/GerenciamentoTributario/views/repository/ItbiRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GerenciamentoTributario/src/main/java/com/GerenciamentoTributario/views/services/ImovelService.java" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciamentoTributario/src/main/java/com/GerenciamentoTributario/views/services/ImovelService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GerenciamentoTributario/src/main/java/com/GerenciamentoTributario/views/services/IptuService.java" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciamentoTributario/src/main/java/com/GerenciamentoTributario/views/services/IptuService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GerenciamentoTributario/src/main/java/com/GerenciamentoTributario/views/services/ItbiService.java" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciamentoTributario/src/main/java/com/GerenciamentoTributario/views/services/ItbiService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GerenciamentoTributario/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciamentoTributario/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,25 +48,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/giova/Documents/Gerenciamento-Tributario&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/giova/Documents/Gerenciamento-Tributario",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\giova\Documents\Gerenciamento-Tributario" />
@@ -102,6 +100,7 @@
       <workItem from="1698582973913" duration="40404000" />
       <workItem from="1698682999707" duration="35572000" />
       <workItem from="1698726274146" duration="1801000" />
+      <workItem from="1698759955021" duration="9581000" />
     </task>
     <servers />
   </component>

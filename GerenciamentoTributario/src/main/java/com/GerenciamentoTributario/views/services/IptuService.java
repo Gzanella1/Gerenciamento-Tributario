@@ -9,6 +9,7 @@ import com.GerenciamentoTributario.models.entity.ImovelEntity;
 import com.GerenciamentoTributario.models.entity.IptuEntity;
 import com.GerenciamentoTributario.views.repository.ImovelRepository;
 import com.GerenciamentoTributario.views.repository.IptuRepository;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -17,6 +18,7 @@ import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
 @Service
+@Slf4j
 public class IptuService {
 
     @Autowired
@@ -35,65 +37,34 @@ public class IptuService {
         iptuRepository.save(tributoIptu);
     }
 
-//    public List<IptuDTO> buscaIptu() {
-//        return iptuRepository.findAll().stream().map(cE -> {
-//           //NÃO PEGOU AS INFORMAÇÕES
-//            ContribuinteEntity contribuinte = new ContribuinteEntity();
-//            ContribuinteDTO contribuinteDTO = ContribuinteDTO.builder()
-//                    .codigoContribuinte(contribuinte.getCodigoContribuinte())
-//                    .cpf(contribuinte.getCodigoContribuinte())
-//                    .email(contribuinte.getEmail())
-//                    .nome(contribuinte.getNome())
-//                    .telefone(contribuinte.getTelefone())
-//                    .build();
-//
-//            //PEGOU AS INFORMAÇÕES QUE EU PRECISO
-//            ImovelDTO imovelDTO = new ImovelDTO();
-//            imovelDTO.setCodigoImovel(cE.getImovel().getCodigoImovel());
-//            imovelDTO.setDataInscricao(cE.getImovel().getDataInscricao());
-//            imovelDTO.setArea(cE.getImovel().getArea());
-//            imovelDTO.setValorVenal(cE.getImovel().getValorVenal());
-//            imovelDTO.setTipoImovel(cE.getImovel().getTipoImovel());
-//            imovelDTO.setProprietario(contribuinteDTO);
-//
-//            //NÃO PEGOU AS INFORMAÇÕES
-//            IptuDTO imDto = new IptuDTO();
-//            imDto.setDataLancamento(cE.getDataLancamento());
-//            imDto.setAnoCompetencia(cE.getAnoCompetencia());
-//            imDto.setValor(cE.getValor());
-//            imDto.setImovel(imovelDTO);
-//
-//            return imDto;
-//        }).collect(Collectors.toList());
-//    }
-
-
-
     public List<IptuDTO> buscaIptu() {
         return iptuRepository.findAll().stream().map(cE -> {
-            ContribuinteEntity contribuinte = cE.getImovel().getProprietario(); // Obter o proprietário diretamente
-
-            ImovelEntity imovel = cE.getImovel(); // Obter o imóvel diretamente
 
             IptuDTO imDto = new IptuDTO();
+            log.info("não pegou as informações no banco");
+            System.out.printf(String.valueOf(cE));
             imDto.setDataLancamento(cE.getDataLancamento());
             imDto.setAnoCompetencia(cE.getAnoCompetencia());
+            //e tambem não pegou o valor
             imDto.setValor(cE.getValor());
 
+            ImovelEntity imovel = cE.getImovel();
             ImovelDTO imovelDTO = new ImovelDTO();
             imovelDTO.setCodigoImovel(imovel.getCodigoImovel());
             imovelDTO.setDataInscricao(imovel.getDataInscricao());
             imovelDTO.setArea(imovel.getArea());
             imovelDTO.setValorVenal(imovel.getValorVenal());
             imovelDTO.setTipoImovel(imovel.getTipoImovel());
-            imovelDTO.setProprietario(ContribuinteDTO.builder()
-                    .codigoContribuinte(contribuinte.getCodigoContribuinte())
-                    .cpf(contribuinte.getCodigoContribuinte())
-                    .email(contribuinte.getEmail())
-                    .nome(contribuinte.getNome())
-                    .telefone(contribuinte.getTelefone())
-                    .build());
 
+            ContribuinteEntity contribuinte = imovel.getProprietario();
+            ContribuinteDTO contribuinteDTO = new ContribuinteDTO();
+            contribuinteDTO.setCodigoContribuinte(contribuinte.getCodigoContribuinte());
+            contribuinteDTO.setCpf(contribuinte.getCodigoContribuinte());
+            contribuinteDTO.setEmail(contribuinte.getEmail());
+            contribuinteDTO.setNome(contribuinte.getNome());
+            contribuinteDTO.setTelefone(contribuinte.getTelefone());
+
+            imovelDTO.setProprietario(contribuinteDTO);
             imDto.setImovel(imovelDTO);
 
             return imDto;

@@ -22,6 +22,7 @@ public class ImovelEntity {
 
     @Column(name = "codigoImovel")
     private String codigoImovel;
+
     @Column(name = "dataInscricao")
     private LocalDateTime dataInscricao;
 

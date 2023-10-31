@@ -36,4 +36,9 @@ public class TributosController {
     public List<IptuDTO> retornaTributoIPTU() {
         return iptuService.buscaIptu();
     }
+
+    @GetMapping("/itbi")
+    public List<ItbiDTO> retornaTributoITBI() {
+        return itbiService.buscaItbi();
+    }
 }
