@@ -4,7 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="58b37d86-a07a-40c0-93ee-e164c0450a28" name="Changes" comment="" />
+    <list default="true" id="58b37d86-a07a-40c0-93ee-e164c0450a28" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GerenciamentoTributario/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciamentoTributario/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GerenciamentoTributario/src/main/java/com/GerenciamentoTributario/controllers/ImovelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciamentoTributario/src/main/java/com/GerenciamentoTributario/controllers/ImovelController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GerenciamentoTributario/src/main/java/com/GerenciamentoTributario/controllers/TributosController.java" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciamentoTributario/src/main/java/com/GerenciamentoTributario/controllers/TributosController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GerenciamentoTributario/src/main/java/com/GerenciamentoTributario/models/dto/ContribuinteDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciamentoTributario/src/main/java/com/GerenciamentoTributario/models/dto/ContribuinteDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GerenciamentoTributario/src/main/java/com/GerenciamentoTributario/models/dto/ImovelDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciamentoTributario/src/main/java/com/GerenciamentoTributario/models/dto/ImovelDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GerenciamentoTributario/src/main/java/com/GerenciamentoTributario/models/dto/IptuDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciamentoTributario/src/main/java/com/GerenciamentoTributario/models/dto/IptuDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GerenciamentoTributario/src/main/java/com/GerenciamentoTributario/models/dto/ItbiDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciamentoTributario/src/main/java/com/GerenciamentoTributario/models/dto/ItbiDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GerenciamentoTributario/src/main/java/com/GerenciamentoTributario/models/dto/TributoDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciamentoTributario/src/main/java/com/GerenciamentoTributario/models/dto/TributoDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GerenciamentoTributario/src/main/java/com/GerenciamentoTributario/models/entity/ContribuinteEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciamentoTributario/src/main/java/com/GerenciamentoTributario/models/entity/ContribuinteEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GerenciamentoTributario/src/main/java/com/GerenciamentoTributario/models/entity/ImovelEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciamentoTributario/src/main/java/com/GerenciamentoTributario/models/entity/ImovelEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GerenciamentoTributario/src/main/java/com/GerenciamentoTributario/models/entity/IptuEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciamentoTributario/src/main/java/com/GerenciamentoTributario/models/entity/IptuEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GerenciamentoTributario/src/main/java/com/GerenciamentoTributario/models/entity/ItbiEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciamentoTributario/src/main/java/com/GerenciamentoTributario/models/entity/ItbiEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GerenciamentoTributario/src/main/java/com/GerenciamentoTributario/models/entity/TributoEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciamentoTributario/src/main/java/com/GerenciamentoTributario/models/entity/TributoEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GerenciamentoTributario/src/main/java/com/GerenciamentoTributario/views/repository/ContribuinteRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciamentoTributario/src/main/java/com/GerenciamentoTributario/views/repository/ContribuinteRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GerenciamentoTributario/src/main/java/com/GerenciamentoTributario/views/repository/ImovelRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciamentoTributario/src/main/java/com/GerenciamentoTributario/views/repository/ImovelRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GerenciamentoTributario/src/main/java/com/GerenciamentoTributario/views/repository/IptuRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciamentoTributario/src/main/java/com/GerenciamentoTributario/views/repository/IptuRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GerenciamentoTributario/src/main/java/com/GerenciamentoTributario/views/repository/ItbiRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciamentoTributario/src/main/java/com/GerenciamentoTributario/views/repository/ItbiRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GerenciamentoTributario/src/main/java/com/GerenciamentoTributario/views/services/ImovelService.java" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciamentoTributario/src/main/java/com/GerenciamentoTributario/views/services/ImovelService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GerenciamentoTributario/src/main/java/com/GerenciamentoTributario/views/services/IptuService.java" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciamentoTributario/src/main/java/com/GerenciamentoTributario/views/services/IptuService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GerenciamentoTributario/src/main/java/com/GerenciamentoTributario/views/services/ItbiService.java" beforeDir="false" afterPath="$PROJECT_DIR$/GerenciamentoTributario/src/main/java/com/GerenciamentoTributario/views/services/ItbiService.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -85,7 +107,7 @@
       <workItem from="1698582973913" duration="40404000" />
       <workItem from="1698682999707" duration="35572000" />
       <workItem from="1698726274146" duration="1801000" />
-      <workItem from="1698759955021" duration="11013000" />
+      <workItem from="1698759955021" duration="17666000" />
     </task>
     <servers />
   </component>

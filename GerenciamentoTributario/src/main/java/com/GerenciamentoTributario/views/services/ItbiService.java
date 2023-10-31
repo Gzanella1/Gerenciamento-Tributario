@@ -43,36 +43,35 @@ public class ItbiService {
     }
 
     public List<ItbiDTO> buscaItbi() {
-    return itbiRepository.findAll().stream().map(itbiEntity -> {
-        ItbiDTO dto=new ItbiDTO();
-        dto.setDataLancamento(itbiEntity.getDataLancamento());
-        dto.setValor(itbiEntity.getValor());
-        dto.setDataTransferencia(itbiEntity.getDataTransferencia());
+        return itbiRepository.findAll().stream().map(itbiEntity -> {
+            ItbiDTO dto = new ItbiDTO();
+            dto.setDataLancamento(itbiEntity.getDataLancamento());
+            dto.setValor(itbiEntity.getValor());
+            dto.setDataTransferencia(itbiEntity.getDataTransferencia());
 
-        ImovelEntity imovel = itbiEntity.getImovel();
-        ImovelDTO imovelDTO = new ImovelDTO();
-        imovelDTO.setCodigoImovel(imovel.getCodigoImovel());
-        imovelDTO.setDataInscricao(imovel.getDataInscricao());
-        imovelDTO.setArea(imovel.getArea());
-        imovelDTO.setValorVenal(imovel.getValorVenal());
-        imovelDTO.setTipoImovel(imovel.getTipoImovel());
+            ImovelEntity imovel = itbiEntity.getImovel();
+            ImovelDTO imovelDTO = new ImovelDTO();
+            imovelDTO.setCodigoImovel(imovel.getCodigoImovel());
+            imovelDTO.setDataInscricao(imovel.getDataInscricao());
+            imovelDTO.setArea(imovel.getArea());
+            imovelDTO.setValorVenal(imovel.getValorVenal());
+            imovelDTO.setTipoImovel(imovel.getTipoImovel());
 
-        ContribuinteEntity contribuinte = imovel.getProprietario();
-        ContribuinteDTO contribuinteDTO = new ContribuinteDTO();
-        contribuinteDTO.setCodigoContribuinte(contribuinte.getCodigoContribuinte());
-        contribuinteDTO.setCpf(contribuinte.getCodigoContribuinte());
-        contribuinteDTO.setEmail(contribuinte.getEmail());
-        contribuinteDTO.setNome(contribuinte.getNome());
-        contribuinteDTO.setTelefone(contribuinte.getTelefone());
+            ContribuinteEntity contribuinte = imovel.getProprietario();
+            ContribuinteDTO contribuinteDTO = new ContribuinteDTO();
+            contribuinteDTO.setCodigoContribuinte(contribuinte.getCodigoContribuinte());
+            contribuinteDTO.setCpf(contribuinte.getCodigoContribuinte());
+            contribuinteDTO.setEmail(contribuinte.getEmail());
+            contribuinteDTO.setNome(contribuinte.getNome());
+            contribuinteDTO.setTelefone(contribuinte.getTelefone());
 
-        dto.setImovel(imovelDTO);
-        dto.setProprietarioAtual(contribuinteDTO);
-        dto.setNovoProprietario(contribuinteDTO);
+            dto.setImovel(imovelDTO);
+            dto.setProprietarioAtual(contribuinteDTO);
+            dto.setNovoProprietario(contribuinteDTO);
 
-        return dto;
-    }).collect(Collectors.toList());
+            return dto;
+        }).collect(Collectors.toList());
     }
-
 }
 
 

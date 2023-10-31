@@ -5,7 +5,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.experimental.SuperBuilder;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.MappedSuperclass;
 import java.time.LocalDateTime;
 
 @Data
@@ -14,11 +15,8 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @MappedSuperclass
 public class TributoEntity {
-
     @Column(name = "dataLancamento")
     protected LocalDateTime dataLancamento;
     @Column(name = "valor")
     public String valor;
-
-
 }

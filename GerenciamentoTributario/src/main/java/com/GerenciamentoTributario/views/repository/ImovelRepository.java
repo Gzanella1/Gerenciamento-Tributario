@@ -8,10 +8,13 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface ImovelRepository extends JpaRepository<ImovelEntity, String> {
+public interface ImovelRepository extends JpaRepository<ImovelEntity, Integer> {
 
-    ImovelEntity findByCodigoImovel(String id);
+    ImovelEntity findByCodigoImovel(int id);
+
     List<ImovelEntity> findByOrderByCodigoImovelAsc();
+
     List<ImovelEntity> findAllByOrderByCodigoImovelAsc();
+
     List<ImovelEntity> findByProprietario(ContribuinteEntity contribuinte);
 }

@@ -12,13 +12,11 @@ import java.time.LocalDateTime;
 @Entity
 @Table(name = "iptu")
 public class IptuEntity extends TributoEntity {
-
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     protected int id;
     @Column(name = "anoCompetencia")
     private String anoCompetencia;
-
     @ManyToOne(cascade = CascadeType.MERGE)
     @JoinColumn(name = "imovel_id")
     private ImovelEntity imovel;

@@ -2,12 +2,10 @@ package com.GerenciamentoTributario.controllers;
 
 import com.GerenciamentoTributario.models.dto.IptuDTO;
 import com.GerenciamentoTributario.models.dto.ItbiDTO;
-import com.GerenciamentoTributario.models.entity.ImovelEntity;
 import com.GerenciamentoTributario.views.services.IptuService;
 import com.GerenciamentoTributario.views.services.ItbiService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
 
 // A anotação @RestController indica que esta classe é um controlador Spring que lida com solicitações HTTP.

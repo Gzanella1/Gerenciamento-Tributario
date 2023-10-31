@@ -54,7 +54,7 @@ A aplicação disponibiliza os seguintes endpoints para interagir com os recurso
    - Corpo da Requisição:
      ```json
      {
-       "codigoImovel": "50550",
+       "codigoImovel": 50550,
        "dataInscricao": "2023-08-02T15:00:00",
        "proprietario": {
          "codigoContribuinte": "456789"
@@ -74,7 +74,7 @@ A aplicação disponibiliza os seguintes endpoints para interagir com os recurso
        "dataLancamento": "2023-08-02T15:00:00",
        "valor": "40",
        "imovel": {
-         "codigoImovel": "50550"
+         "codigoImovel": 50550
        },
        "anoCompetencia": "2001"
      }
@@ -89,7 +89,7 @@ A aplicação disponibiliza os seguintes endpoints para interagir com os recurso
        "dataLancamento": "2023-08-02T15:00:00",
        "valor": "40",
        "imovel": {
-         "codigoImovel": "50550"
+         "codigoImovel": 50550
        },
        "dataTransferencia": "2023-08-02T15:00:00",
        "proprietarioAtual": {

@@ -14,7 +14,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
 @Service
@@ -42,10 +41,8 @@ public class IptuService {
 
             IptuDTO imDto = new IptuDTO();
             log.info("não pegou as informações no banco");
-            System.out.printf(String.valueOf(cE));
             imDto.setDataLancamento(cE.getDataLancamento());
             imDto.setAnoCompetencia(cE.getAnoCompetencia());
-            //e tambem não pegou o valor
             imDto.setValor(cE.getValor());
 
             ImovelEntity imovel = cE.getImovel();
@@ -70,8 +67,6 @@ public class IptuService {
             return imDto;
         }).collect(Collectors.toList());
     }
-
-
 }
 
 

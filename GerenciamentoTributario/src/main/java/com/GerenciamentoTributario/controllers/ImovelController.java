@@ -1,13 +1,10 @@
 package com.GerenciamentoTributario.controllers;
 
 import com.GerenciamentoTributario.models.dto.ImovelDTO;
-import com.GerenciamentoTributario.models.entity.ImovelEntity;
 import com.GerenciamentoTributario.views.services.ImovelService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
-import java.util.Set;
 
 @RestController
 @RequestMapping(value = "/imovel")

@@ -19,22 +19,17 @@ public class ImovelEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
-
     @Column(name = "codigoImovel")
-    private String codigoImovel;
-
+    private int codigoImovel;
     @Column(name = "dataInscricao")
     private LocalDateTime dataInscricao;
-
     @ManyToOne(cascade = CascadeType.MERGE)
     @JoinColumn(name = "contribuinte_id")
     private ContribuinteEntity proprietario;
-
     @Column(name = "area")
     private double area;
     @Column(name = "valorVenal")
     private double valorVenal;
     @Column(name = "tipoImovel")
     private MenuTipoImovel tipoImovel;
-
 }
