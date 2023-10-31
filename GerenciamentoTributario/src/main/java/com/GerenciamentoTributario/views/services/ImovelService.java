@@ -6,6 +6,7 @@ import com.GerenciamentoTributario.models.entity.ContribuinteEntity;
 import com.GerenciamentoTributario.models.entity.ImovelEntity;
 import com.GerenciamentoTributario.views.repository.ContribuinteRepository;
 import com.GerenciamentoTributario.views.repository.ImovelRepository;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -18,6 +19,7 @@ import java.util.Set;
 import java.util.stream.Collectors;
 
 @Service
+@Slf4j
 public class ImovelService {
 
     @Autowired
@@ -40,47 +42,70 @@ public class ImovelService {
     }
 
 
-    public List<ImovelDTO> buscarImoveisOrdenadosPorCodigo() {
-        return imovelRepository.findAllByOrderByCodigoImovel().stream().map(imovelE -> {
-            ImovelDTO imovelDTO = new ImovelDTO();
-            imovelDTO.setCodigoImovel(imovelE.getCodigoImovel());
-            imovelDTO.setDataInscricao(imovelE.getDataInscricao());
-            imovelDTO.setArea(imovelE.getArea());
-            imovelDTO.setValorVenal(imovelE.getValorVenal());
-            imovelDTO.setTipoImovel(imovelE.getTipoImovel());
-            return imovelDTO;
-        }).collect(Collectors.toList());
+    public List<ImovelEntity> buscarImoveisOrdenadosPorCodigo() {
+        List<ImovelEntity> imovelEntities = imovelRepository.findAll();
+        Collections.sort(imovelEntities,(i1,i2)->i2.getCodigoImovel().compareTo(i1.getCodigoImovel()));
+//        return imovelRepository.findByOrderByCodigoImovelAsc().stream().map(imovelE -> {
+//            ImovelDTO imovelDTO = new ImovelDTO();
+//            imovelDTO.setCodigoImovel(imovelE.getCodigoImovel());
+//            imovelDTO.setDataInscricao(imovelE.getDataInscricao());
+//            imovelDTO.setArea(imovelE.getArea());
+//            imovelDTO.setValorVenal(imovelE.getValorVenal());
+//            imovelDTO.setTipoImovel(imovelE.getTipoImovel());
+//            return imovelDTO;
+//        }).collect(Collectors.toList());
+        return imovelEntities;
     }
 
-    //Decidi colocar o set<ImovelDTO> pois ele não permite elementos duplicados
-    public Set<ImovelDTO> buscarImoveisPorContribuinte(String codigoContribuinte) {
-        //Fiz parecido com o que a Je me ensinou
-        //Busca um objeto contribuinte caso o codigo corresponde ao codigoContribuinte que é passado por parametro
-        ContribuinteEntity contribuinte = contribuinteRepository.findByCodigoContribuinte(codigoContribuinte);
-        //pensei em faze esse if pq ele pode colocar um codigo de um contribuinte que não existe
-        if (contribuinte != null) {
-            //busca um imovel caso o proprietario corresponde ao contribuinte
-            List<ImovelEntity> imoveisDoContribuinte = imovelRepository.findByProprietario(contribuinte);
-            Set<ImovelDTO> imoveisDTO = imoveisDoContribuinte.stream().map(cE -> {
-                //Não sei se esse codigo esta legal, tentei fazer com o Build
-                //Funciona
-                ImovelDTO imDto = new ImovelDTO();
-                imDto.setCodigoImovel(cE.getCodigoImovel());
-                imDto.setDataInscricao(LocalDateTime.parse(cE.getDataInscricao()
-                                .format(DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss")),
-                        DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss")));
-                imDto.setArea(cE.getArea());
-                imDto.setValorVenal(cE.getValorVenal());
-                imDto.setTipoImovel(cE.getTipoImovel());
-                //imDto.setProprietario();
-                return imDto;
-            }).collect(Collectors.toSet());
+    public List<ImovelDTO> buscarImoveisPorContribuinte(String codigoContribuinte) {
+        ContribuinteEntity contribuinte =new ContribuinteEntity();
+        try{
+            log.info("Executando find para encontrar contribuinte no banco de dados");
+            //Busca um objeto contribuinte caso o codigo corresponde ao codigoContribuinte que é passado por parametro
+            contribuinte = contribuinteRepository.findByCodigoContribuinte(codigoContribuinte);
 
-            return imoveisDTO;
+
+        }catch(Exception e){
+            log.error("Contribuinte não encontrado na base de dados");
+        }
+
+        if (contribuinte != null) {
+            try{
+                //busca um imovel caso o proprietario corresponde ao contribuinte
+                ContribuinteDTO contribuinteDTO=ContribuinteDTO.builder()
+                        .codigoContribuinte(contribuinte.getCodigoContribuinte())
+                        .cpf(contribuinte.getCodigoContribuinte())
+                        .email(contribuinte.getEmail())
+                        .nome(contribuinte.getNome())
+                        .telefone(contribuinte.getTelefone())
+                        .build();
+
+                List<ImovelEntity> imoveisDoContribuinte = imovelRepository.findByProprietario(contribuinte);
+
+                List<ImovelDTO> imoveisDTO = imoveisDoContribuinte.stream().map(cE -> {
+                    ImovelDTO imDto = new ImovelDTO();
+                    imDto.setCodigoImovel(cE.getCodigoImovel());
+                    imDto.setDataInscricao(LocalDateTime.parse(cE.getDataInscricao()
+                                    .format(DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss")),
+                            DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss")));
+                    imDto.setArea(cE.getArea());
+                    imDto.setValorVenal(cE.getValorVenal());
+                    imDto.setTipoImovel(cE.getTipoImovel());
+                    imDto.setProprietario(contribuinteDTO);
+                    return imDto;
+                }).collect(Collectors.toList());
+
+                return imoveisDTO;
+
+            }catch (Exception e){
+                log.error("Não foi possivel encontrar imoveis no banco de dados");
+            }
         } else {
             // Lida com o caso em que o contribuinte não foi encontrado
-            return Collections.emptySet();
+            log.info("Contribuinte não encontrado na base de dados");
+            return Collections.emptyList();
         }
+        return Collections.emptyList();
     }
 }
 

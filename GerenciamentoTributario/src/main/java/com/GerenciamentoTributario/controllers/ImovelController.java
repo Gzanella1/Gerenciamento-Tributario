@@ -21,12 +21,12 @@ public class ImovelController {
     }
 
     @GetMapping("/todos")
-    public List<ImovelDTO> buscarImoveisOrdenadosPorCodigo() {
+    public List<ImovelEntity> buscarImoveisOrdenadosPorCodigo() {
         return imovelService.buscarImoveisOrdenadosPorCodigo();
     }
 
     @GetMapping("/busca")
-    public Set<ImovelDTO> buscarImoveisPorContribuinte(@RequestParam(name = "codigoContribuinte") String codigoContribuinte) {
+    public List<ImovelDTO> buscarImoveisPorContribuinte(@RequestParam(name = "codigoContribuinte") String codigoContribuinte) {
         return imovelService.buscarImoveisPorContribuinte(codigoContribuinte);
     }
 }

@@ -11,6 +11,6 @@ import java.util.List;
 public interface ImovelRepository extends JpaRepository<ImovelEntity, String> {
 
     ImovelEntity findByCodigoImovel(String id);
-    List<ImovelEntity> findAllByOrderByCodigoImovel();
+    List<ImovelEntity> findByOrderByCodigoImovelAsc();
     List<ImovelEntity> findByProprietario(ContribuinteEntity contribuinte);
 }

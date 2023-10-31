@@ -1,6 +1,7 @@
 package com.GerenciamentoTributario.models.dto;
 
 import com.GerenciamentoTributario.enums.MenuTipoImovel;
+import lombok.Builder;
 import lombok.Data;
 
 
@@ -15,6 +16,5 @@ public class ImovelDTO {
     private double area;
     private double valorVenal;
     private MenuTipoImovel tipoImovel;
-
 
 }
